@@ -1,34 +1,40 @@
 .calculator {
     width: 200px;
     margin: 10px auto;
-    border: 1px solid black;
 }
 
 .result {
-    width: 190px;
+    width: 188px;
     padding: 10px 10px 10px 0;
     background-color: darkslategray;
     color: white;
     text-align: right;
+    border: 1px solid black;
 }
 
 .clear {
-    width: 75%;
+    width: 149px;
     float: left;
     text-align: center;
     background-color: white;
     padding: 10px 0;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .button {
-    width: 25%;
+    width: 49px;
     float: left;
     text-align: center;
     background-color: white;
     padding: 10px 0;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .operator {
+    width: 48px;
     background-color: red;
     color: white;
+    border-right: 1px solid black;
 }
