@@ -9,7 +9,6 @@ class App extends Component {
 
   numberPressed = (event) => {
 
-
       let newDisplayedNumber = this.state.numberExposed;
 
       this.state.numberExposed !== 0 ?
