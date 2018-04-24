@@ -5,6 +5,7 @@ class App extends Component {
 
   state = {
       numberExposed: 0,
+      operatorActive: false,
   };
 
   numberPressed = (event) => {
@@ -26,7 +27,18 @@ class App extends Component {
 
       this.setState({
 
-          numberExposed: 0
+          numberExposed: 0,
+          operatorActive: false,
+
+      })
+
+  };
+
+  operatorPressed = (event) => {
+
+      this.setState({
+
+          operatorActive: event.target.dataset.key,
 
       })
 
@@ -38,7 +50,10 @@ class App extends Component {
         <div className='calculator'>
           <div className='result'>{ this.state.numberExposed }</div>
           <div className='clear' onClick={ this.clearPressed }>clear</div>
-          <div className='button operator'>&divide;</div>
+          <div className='button operator'
+               onClick={ this.operatorPressed }
+               data-key='divide'
+          >&divide;</div>
           <div className='button' onClick={ this.numberPressed } data-key='7'>7</div>
           <div className='button' onClick={ this.numberPressed } data-key='8'>8</div>
           <div className='button' onClick={ this.numberPressed } data-key='9'>9</div>
