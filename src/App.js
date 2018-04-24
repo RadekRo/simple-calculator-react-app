@@ -40,7 +40,9 @@ class App extends Component {
 
           operatorActive: event.target.dataset.key,
 
-      })
+      });
+
+      document.getElementById('operator-display').setAttribute('style', 'display: block');
 
   };
 
@@ -48,7 +50,10 @@ class App extends Component {
     return (
       <React.Fragment>
         <div className='calculator'>
-          <div className='result'>{ this.state.numberExposed }</div>
+          <div className='result'>
+              <div id='operator-display'>&divide;</div>
+              { this.state.numberExposed }
+          </div>
           <div className='clear' onClick={ this.clearPressed }>clear</div>
           <div className='button operator'
                onClick={ this.operatorPressed }

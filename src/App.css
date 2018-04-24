@@ -65,3 +65,12 @@ body {
 .operator:active {
     background-color: orange;
 }
+
+#operator-display {
+    position: relative;
+    float: left;
+    padding: 3px 0 0 5px;
+    font-size: 30px;
+    color: yellow;
+    display: none;
+}
