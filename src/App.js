@@ -6,6 +6,7 @@ class App extends Component {
   state = {
       numberExposed: 0,
       operatorActive: false,
+      result: 0,
   };
 
   numberPressed = (event) => {
