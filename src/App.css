@@ -33,6 +33,10 @@ body {
     cursor: pointer;
 }
 
+.clear:active {
+    background-color: lightgray;
+}
+
 .button {
     width: 79px;
     float: left;
@@ -47,9 +51,26 @@ body {
     cursor: pointer;
 }
 
+.button:active {
+    background-color: lightgray;
+}
+
 .operator {
     width: 78px;
     background-color: red;
     color: white;
     border-right: 1px solid black;
+}
+
+.operator:active {
+    background-color: orange;
+}
+
+#operator-display {
+    position: relative;
+    float: left;
+    padding: 3px 0 0 5px;
+    font-size: 30px;
+    color: white;
+    display: none;
 }

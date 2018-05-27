@@ -3,7 +3,7 @@
 
 __Description:__
 
-A simple calculator. User is allowed to add, subtract, multiply and divide numbers to the value of
+A simple calculator. User is allowed to add, subtract and divide numbers to the value of
 999999999. Clearing display showing 0 on start is also possible. When te user reaches highest displayed
  number an info is exposed.
 
