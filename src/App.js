@@ -6,19 +6,12 @@ class App extends Component {
   state = {
       numberExposed: 0,
       operatorActive: false,
-      operation: '',
       result: 0,
   };
 
   numberPressed = (event) => {
 
       let newDisplayedNumber = this.state.numberExposed;
-
-      if (this.state.operatorActive) {
-          console.log('operator aktywny');
-      } else {
-          console.log('operator nieaktywny');
-      }
 
       this.state.numberExposed !== 0 ?
           newDisplayedNumber += event.target.dataset.key :
@@ -28,7 +21,8 @@ class App extends Component {
 
             numberExposed: newDisplayedNumber
 
-          })
+          });
+        console.log(this.state);
     };
 
   clearPressed = () => {
@@ -49,14 +43,14 @@ class App extends Component {
       this.setState({
 
           operatorActive: event.target.dataset.key,
-          result: this.state.numberExposed,
+          result: this.state.numberExposed
 
       });
 
+      newDisplayedNumber = 0;
       document.getElementById('operator-display').setAttribute('style', 'display: block');
 
   };
-
   render() {
     return (
       <React.Fragment>
