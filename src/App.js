@@ -21,7 +21,8 @@ class App extends Component {
 
             numberExposed: newDisplayedNumber
 
-          })
+          });
+        console.log(this.state);
     };
 
   clearPressed = () => {
@@ -42,13 +43,14 @@ class App extends Component {
       this.setState({
 
           operatorActive: event.target.dataset.key,
+          result: this.state.numberExposed
 
       });
 
+      newDisplayedNumber = 0;
       document.getElementById('operator-display').setAttribute('style', 'display: block');
 
   };
-
   render() {
     return (
       <React.Fragment>
