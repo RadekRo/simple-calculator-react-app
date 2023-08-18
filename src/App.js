@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-
-  state = {
+ constructor() {
+ super()
+ 
+  this.state = {
       numberExposed: 0,
       operatorActive: false,
       result: 0,
   };
+}
 
   numberPressed = (event) => {
 
@@ -16,7 +19,7 @@ class App extends Component {
       this.state.numberExposed !== 0 ?
           newDisplayedNumber += event.target.dataset.key :
           newDisplayedNumber = event.target.dataset.key;
-
+      console.log(event)
       this.setState({
 
             numberExposed: newDisplayedNumber
@@ -43,11 +46,11 @@ class App extends Component {
       this.setState({
 
           operatorActive: event.target.dataset.key,
-          result: this.state.numberExposed
+          result: this.state.numberExposed,
+          newDisplayedNumber : 0
 
       });
 
-      newDisplayedNumber = 0;
       document.getElementById('operator-display').setAttribute('style', 'display: block');
 
   };
