@@ -47,7 +47,7 @@ class App extends Component {
 
           operatorActive: event.target.dataset.key,
           result: this.state.numberExposed,
-          newDisplayedNumber : 0
+          numberExposed : 0
 
       });
 
