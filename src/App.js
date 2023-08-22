@@ -46,17 +46,21 @@ class App extends Component {
       this.setState({
 
           operatorActive: event.target.dataset.key,
-          result: this.state.numberExposed,
           numberExposed : 0
-
       });
+
+      if (event.target.dataset.key === "+") {
+        this.setState({
+          result : this.state.result + parseInt(this.state.numberExposed)
+        })
+      } 
 
       document.getElementById('operator-display').setAttribute('style', 'display: block');
 
   };
   render() {
     return (
-      <React.Fragment>
+      
         <div className='calculator'>
           <div className='result'>
               <div id='operator-display'>{ this.state.operatorActive }</div>
@@ -72,7 +76,7 @@ class App extends Component {
           <div className='button' onClick={ this.numberPressed } data-key='9'>9</div>
           <div className='button operator'
                 onClick={ this.operatorPressed }
-                data-key='x'
+                data-key='x;'
           >x</div>
           <div className='button' onClick={ this.numberPressed } data-key='4'>4</div>
           <div className='button' onClick={ this.numberPressed } data-key='5'>5</div>
@@ -90,7 +94,7 @@ class App extends Component {
           <div className='button blocked'>-</div>
           <div className='button operator'>=</div>
         </div>
-      </React.Fragment>
+
     );
   }
 }
