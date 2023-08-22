@@ -72,8 +72,8 @@ class App extends Component {
           <div className='button' onClick={ this.numberPressed } data-key='9'>9</div>
           <div className='button operator'
                 onClick={ this.operatorPressed }
-                data-key='-'
-          >-</div>
+                data-key='x'
+          >x</div>
           <div className='button' onClick={ this.numberPressed } data-key='4'>4</div>
           <div className='button' onClick={ this.numberPressed } data-key='5'>5</div>
           <div className='button' onClick={ this.numberPressed } data-key='6'>6</div>
@@ -84,6 +84,10 @@ class App extends Component {
           <div className='button' onClick={ this.numberPressed } data-key='1'>1</div>
           <div className='button' onClick={ this.numberPressed } data-key='2'>2</div>
           <div className='button' onClick={ this.numberPressed } data-key='3'>3</div>
+          <div className='button operator'>-</div>
+          <div className='button blocked'>-</div>
+          <div className='button' onClick={ this.numberPressed } data-key='0'>0</div>
+          <div className='button blocked'>-</div>
           <div className='button operator'>=</div>
         </div>
       </React.Fragment>

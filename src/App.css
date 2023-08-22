@@ -51,6 +51,11 @@ body {
     cursor: pointer;
 }
 
+.button.blocked {
+    cursor: arrow;
+    background-color: black;
+}
+
 .button:active {
     background-color: lightgray;
 }
