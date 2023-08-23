@@ -54,6 +54,21 @@ class App extends Component {
           result : this.state.result + parseInt(this.state.numberExposed)
         })
       } 
+      else if (event.target.dataset.key === "-") {
+        this.setState({
+          result : this.state.result - parseInt(this.state.numberExposed)
+        })
+      }
+      else if (event.target.dataset.key === "x") {
+        this.setState({
+          result : this.state.result * parseInt(this.state.numberExposed)
+        })
+      }
+      else {
+        this.setState({
+          result : this.state.result / parseInt(this.state.numberExposed)
+        })
+      }
 
       document.getElementById('operator-display').setAttribute('style', 'display: block');
 
